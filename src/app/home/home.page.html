@@ -8,7 +8,17 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime
+              (ionChange)="getValueFromInput($event)"
+              displayFormat="D MMM YYYY H:mm"
+              min="1997"
+              max="2010"
+              [value]="data"
+      >
+
+      </ion-datetime>
+    </ion-item>
   </div>
 </ion-content>
